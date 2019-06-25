@@ -7,7 +7,7 @@ using namespace std;
 int main()
 {
 	string str;
-	int a, e, y, u, i, o, k;
+	int a, e, y, u, i, o;
 	a = 0;
 	e = 0;
 	y = 0;
