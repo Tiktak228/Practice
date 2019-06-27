@@ -4,37 +4,34 @@
 
 using namespace std;
 
-void function(string sr, int &a, int &e, int &y, int &u, int &i, int &o)
+void f(string &str)
 {
-	for (int j = 0; j < sr.length(); j++)
+	int a = 0, e = 0, y = 0, u = 0, i = 0, o = 0;
+	for (int j = 0; j < str.length(); j++)
 	{
-		if (sr[j] == 'a') {
-			a++;
-		}
-		if (sr[j] == 'e') {
-			e++;
-		}
-		if (sr[j] == 'y')
-			y++;
-		if (sr[j] == 'u')
-			u++;
-		if (sr[j] == 'i')
-			i++;
-		if (sr[j] == 'o')
-			o++;
+		if (str[j] == 'A')
+			str[j] = 'a';
+		if (str[j] == 'E')
+			str[j] = 'e';
+		if (str[j] == 'Y')
+			str[j] = 'y';
+		if (str[j] == 'U')
+			str[j] = 'u';
+		if (str[j] == 'I')
+			str[j] = 'i';
+		if (str[j] == 'E')
+			str[j] = 'e';
+		if (str[j] == 'O')
+			str[j] = 'o';
 	}
 }
-
 int main()
 {
-	string in_sr;
-	getline(cin, in_sr);
-	int z = 0, x = 0, c = 0, v = 0, b = 0, n = 0, m = 0;
-	function(in_sr, z, x, c, v, b, n);
-	cout << "a = " << z << " " << "e = " << x << " " << "y = " << c << " " << "u = " << v << " " << "i = " << b << " " << "o = " << n << endl;
-
-	cout << "Test: ";
-	if (z == 1 && x == 2 && c == 0 && v == 1 && b == 2 && n == 3)
+	string str("LOREM ipsum DOLOR sit AmeT");
+	f(str);
+	cout << str << endl;
+	cout << "test: ";
+	if (str == "LoReM ipsum DoLoR sit ameT")
 	{
 		cout << "The program works corre" << endl;
 	}
@@ -42,8 +39,10 @@ int main()
 	{
 		cout << "The program has some problems" << endl;
 	}
+    string str_new(" ");
+	f(str_new);
 	cout << "Void check: ";
-	if (z == 0 && x == 0 && c == 0 && v == 0 && b == 0 && n == 0)
+	if (str == " ")
 	{
 		cout << "The program works corre" << endl;
 	}
