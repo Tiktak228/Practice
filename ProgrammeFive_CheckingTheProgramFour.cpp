@@ -27,13 +27,15 @@ void f(string &str)
 }
 int main()
 {
-	string str;
+	string str, hg;
 	getline(cin, str);
 	f(str);
 	cout << str << endl;
-
+	cout << "test: "<<endl;
+	cout << "Enter the correct answer " << endl;
+	getline(cin, hg);
 	cout << "test: ";
-	if (str == "LoReM ipsum DoLoR sit ameT")
+	if (str == hg)
 	{
 		cout << "The program works corre" << endl;
 	}
@@ -54,3 +56,4 @@ int main()
 	system("pause");
 	return 0;
 }
+
